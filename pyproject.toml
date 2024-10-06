@@ -1,18 +1,24 @@
 [project]
-name = "<project name>"
+name = "nonebot-plugin-llnonebot-api"
 version = "0.1.0"
-description = "<your_project_description>"
+description = "为 LLNoneBot 提供 API 服务 / Provide API services for LLNoneBot"
 authors = [
-    {name = "<your_name>", email = "<your_email>"},
+    { name = "KomoriDev", email = "mute231010@gmail.com" },
 ]
-dependencies = []
-requires-python = ">=3.10"
+dependencies = [
+    "nonebot2[fastapi]>=2.3.3",
+    "fastapi>=0.115.0",
+]
+requires-python = ">=3.9"
 readme = "README.md"
-license = {text = "MIT"}
+license = { text = "MIT" }
 
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
+
+[tool.nonebot]
+plugins = ["nonebot_plugin_llnonebot_api"]
 
 [tool.pdm]
 distribution = true
@@ -27,7 +33,7 @@ dev = [
 
 [tool.black]
 line-length = 90
-target-version = ["py310", "py311", "py312"]
+target-version = ["py39", "py310", "py311", "py312"]
 include = '\.pyi?$'
 extend-exclude = '''
 '''
@@ -42,14 +48,14 @@ extra_standard_library = ["typing_extensions"]
 
 [tool.ruff]
 line-length = 90
-target-version = "py310"
+target-version = "py39"
 
 [tool.ruff.lint]
 select = ["E", "W", "F", "UP", "C", "T", "PYI", "PT", "Q"]
 ignore = ["E402", "C901"]
 
 [tool.pyright]
-pythonVersion = "3.10"
+pythonVersion = "3.9"
 pythonPlatform = "All"
 typeCheckingMode = "basic"
 
