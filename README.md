@@ -7,7 +7,7 @@
 
 <div align="center">
 
-# NoneBot-Plugin-LiteLoader-API
+# NoneBot-Plugin-LLNoneBot-API
 
 _✨ 为 LLNoneBot 提供 API 服务 ✨_
 
